@@ -14,12 +14,13 @@ function App() {
     setFeedback('');
 
     try {
-      const response = await axios.post('http://localhost:5000/analyze', {
-        resume,
-        jobDesc
-      });
+      const response = await axios.post(
+        'https://jobgenie-server.onrender.com/analyze', // 🔄 Replace with your live backend URL
+        { resume, jobDesc }
+      );
       setFeedback(response.data.feedback);
     } catch (error) {
+      console.error('Error during API request:', error); // Optional debugging
       setFeedback('Something went wrong. Try again later.');
     }
 
