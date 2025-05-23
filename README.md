@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 🧠 JobGenie – AI Resume Screener
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JobGenie is a full-stack resume optimization tool that provides AI-style feedback based on a job description. Users can paste their resume and job description to receive a match score, improvement suggestions, and mock interview questions. Submissions are stored in a MongoDB database.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+- **Frontend (Vercel)**:  
+  [https://jobgenie-client.vercel.app](https://jobgenie-client.vercel.app)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Backend API (Render)**:  
+  [https://jobgenie-server.onrender.com](https://jobgenie-server.onrender.com)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (Frontend)
+- Axios
+- Express.js (Backend)
+- Node.js
+- MongoDB Atlas
+- Mongoose
+- Render (Backend Deployment)
+- Vercel (Frontend Deployment)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧑‍💻 Installation / Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📁 Clone the Repositories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/Mustak-Eman/jobgenie-client.git
+git clone https://github.com/Mustak-Eman/jobgenie-server.git
 
-### `npm run eject`
+🔧 Frontend Setup
+bash
+Copy
+Edit
+cd jobgenie-client
+npm install
+npm start
+Runs on: http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔧 Backend Setup
+bash
+Copy
+Edit
+cd jobgenie-server
+npm install
+Create a .env file in the backend folder with:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+env
+Copy
+Edit
+MONGODB_URI=your_mongodb_connection_string_here
+Then run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+Copy
+Edit
+node index.js
+Runs on: http://localhost:5000
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📡 API Endpoints
+Method	Route	Description
+GET	/	Backend health check
+POST	/analyze	Accepts resume & jobDesc, returns feedback
+GET	/submissions	Returns recent saved submissions
 
-## Learn More
+👤 Team Members
+Mustak Ahmed Eman
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+💬 Reflections
+This project helped me understand how to build and deploy a full-stack application using modern web tools. I practiced API design, MongoDB integration, and using deployment platforms like Vercel and Render. The biggest learning was how to securely connect the frontend and backend across the internet and store user-submitted data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🤖 AI Tools Used
+ChatGPT – Used to assist with backend routing, MongoDB integration, error handling, and documentation (README).
